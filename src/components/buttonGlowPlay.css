@@ -1,0 +1,42 @@
+@property --glow {
+  initial-value: 0px;
+  inherits: false;
+  syntax: "<length>";
+}
+
+.btn-glow-play {
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 1px solid transparent;
+  box-shadow: 0 0 20px var(--glow) rgba(255, 255, 255, 0.6);
+  padding: 0.5rem;
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: glow 0.75s ease-in-out infinite alternate;
+  transition: var(--transition-fast);
+}
+
+@keyframes glow {
+  from {
+    --glow: 0px;
+  }
+  to {
+    --glow: 10px;
+  }
+}
+
+.btn-glow-play:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--glow) var(--clr-primary);
+}
+
+.btn-glow-play ion-icon {
+  position: relative;
+  left: 4px;
+  font-size: 3rem;
+  color: var(--clr-primary);
+}

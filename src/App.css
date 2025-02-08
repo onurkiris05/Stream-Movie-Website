@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* COLORS */
+  --clr-primary: #ff3700;
+
+  /* FONTS */
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Racing Sans One", cursive;
+
+  /* TRANSITIONS */
+  --transition-slow: 1s ease-in-out;
+  --transition-normal: 0.5s ease-in-out;
+  --transition-fast: 0.2s ease-in-out;
+
+  /* Z-INDEX */
+  --z-above: 10;
+  --z-below: -10;
+
+  --z-base: 1;
+  --z-content: 50;
+  --z-header: 100;
+  --z-dropdown: 200;
+  --z-modal: 500;
+  --z-tooltip: 1000;
+}
+
+body {
+  background: #000;
+  font-family: var(--ff-primary);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}

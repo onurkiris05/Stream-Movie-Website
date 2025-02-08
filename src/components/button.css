@@ -1,0 +1,23 @@
+.btn-main {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1rem;
+  background: var(--clr-primary);
+  color: #fff;
+  padding: 0.1rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: var(--transition-fast);
+  cursor: pointer !important;
+  border: none;
+}
+
+.btn-main:hover {
+  transform: scale(1.1);
+  color: var(--clr-primary) !important;
+  background: #fff !important;
+}

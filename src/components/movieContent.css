@@ -1,0 +1,55 @@
+.banner-container .content {
+  position: relative;
+  width: clamp(400px, 40%, 600px);
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transition: var(--transition-slow);
+  z-index: var(--z-content);
+}
+
+.banner-container .content.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.banner-container .movie-title {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.banner-container h4 {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.banner-container h4 span {
+  padding: 0 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.banner-container h4 span:first-child {
+  padding-left: 0;
+}
+
+.banner-container h4 span:last-child {
+  border-right: none;
+}
+
+.banner-container .content h4 span i {
+  background: var(--clr-primary);
+  color: #fff;
+  padding: 0 0.5rem;
+  display: inline-block;
+  border-radius: 0.2rem;
+}
+
+.banner-container .content p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.5rem;
+  margin: 1rem 0 2rem;
+}
