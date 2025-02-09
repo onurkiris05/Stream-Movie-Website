@@ -3,7 +3,7 @@
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
-  transition: var(--transition-normal);
+  transition: var(--transition-slow);
   z-index: var(--z-content);
 }
 

@@ -2,9 +2,9 @@ import React from "react";
 import "./trailerContent.css";
 import ButtonGlowPlay from "./ButtonGlowPlay";
 
-function TrailerContent() {
+function TrailerContent({ movie }) {
   return (
-    <div className="trailer-container active">
+    <div className={`trailer-container ${movie.active ? "active" : ""}`}>
       <ButtonGlowPlay />
       <p>Watch Trailer</p>
     </div>

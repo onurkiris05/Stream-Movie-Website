@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./banner.css";
-import bgTransformer from "../assets/movies/bg-transformer.jpg";
 import MovieContent from "../components/MovieContent";
 import DateContent from "../components/DateContent";
 import TrailerContent from "../components/TrailerContent";
+import MovieSwiper from "../components/MovieSwiper";
 
 function Banner() {
   const [movies, setMovies] = useState([]);
@@ -19,22 +19,42 @@ function Banner() {
     fetchData();
   }, []);
 
+  const handleMovieChange = (movieId) => {
+    setMovies((prevMovies) =>
+      prevMovies.map((movie) =>
+        movie._id === movieId ? { ...movie, active: true } : { ...movie, active: false }
+      )
+    );
+  };
+
   return (
     <div className="banner-container">
-      <div className="movie">
-        <img src={bgTransformer} alt="Backgorund Image" className="bgImg active" />
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-6 col-md-12">
-              <MovieContent />
-            </div>
-            <div className="col-lg-6 col-md-12">
-              <DateContent />
-              <TrailerContent />
+      {movies &&
+        movies.length > 0 &&
+        movies.map((movie) => (
+          <div className="movie">
+            <img
+              src={movie.bgImg}
+              alt="Backgorund Image"
+              className={`bgImg ${movie.active ? "active" : ""}`}
+            />
+            <div className="container-fluid">
+              <div className="row">
+                <div className="col-lg-6 col-md-12">
+                  <MovieContent movie={movie} />
+                </div>
+                <div className="col-lg-6 col-md-12">
+                  <DateContent movie={movie} />
+                  <TrailerContent movie={movie} />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        ))}
+
+      {movies && movies.length > 0 && (
+        <MovieSwiper handleChange={handleMovieChange} movies={movies} />
+      )}
     </div>
   );
 }
