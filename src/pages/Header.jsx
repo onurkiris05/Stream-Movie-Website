@@ -3,7 +3,7 @@ import "./header.css";
 import NavListItem from "../components/NavListItem";
 import navListData from "../data/navListData";
 import Search from "../components/Search";
-import Button from "../components/Button";
+import ButtonMain from "../components/ButtonMain";
 
 function Header() {
   return (
@@ -17,9 +17,9 @@ function Header() {
         ))}
       </ul>
       <Search />
-      <Button>
+      <ButtonMain>
         <ion-icon name="log-in-outline"></ion-icon> Sign In
-      </Button>
+      </ButtonMain>
     </header>
   );
 }

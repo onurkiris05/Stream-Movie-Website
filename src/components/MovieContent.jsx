@@ -1,6 +1,6 @@
 import React from "react";
 import "./movieContent.css";
-import Button from "./Button";
+import ButtonMain from "./ButtonMain";
 
 function MovieContent({ movie }) {
   return (
@@ -16,12 +16,12 @@ function MovieContent({ movie }) {
       </h4>
       <p>{movie.description}</p>
       <div className="button-container">
-        <Button style={{ background: "#fff", color: "var(--clr-primary)" }}>
+        <ButtonMain style={{ background: "#fff", color: "var(--clr-primary)" }}>
           <ion-icon name="bookmark-outline"></ion-icon> Book
-        </Button>
-        <Button>
+        </ButtonMain>
+        <ButtonMain>
           <ion-icon name="add-outline"></ion-icon> My list
-        </Button>
+        </ButtonMain>
       </div>
     </div>
   );

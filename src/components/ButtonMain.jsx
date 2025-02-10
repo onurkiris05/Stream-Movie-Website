@@ -1,7 +1,7 @@
 import React from "react";
-import "./button.css";
+import "./buttonMain.css";
 
-function Button({ children, onClick, className = "", style }) {
+function ButtonMain({ children, onClick, className = "", style }) {
   return (
     <button className={`btn-main ${className}`} onClick={onClick} style={style}>
       {children}
@@ -9,4 +9,4 @@ function Button({ children, onClick, className = "", style }) {
   );
 }
 
-export default Button;
+export default ButtonMain;

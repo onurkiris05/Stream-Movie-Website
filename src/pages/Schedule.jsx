@@ -26,18 +26,16 @@ function Schedule() {
   }, [data]);
 
   const handleFilterChange = (filterId) => {
-    const newFilters = filters.map((filter) => ({
-      ...filter,
-      active: filterId === filter._id,
-    }));
-    setFilters(newFilters);
+    setFilters(
+      filters.map((filter) => ({
+        ...filter,
+        active: filterId === filter._id,
+      }))
+    );
   };
 
   useEffect(() => {
-    const selectedFilter = filters.find((filter) => filter.active);
-    if (selectedFilter) {
-      setActiveFilter(selectedFilter);
-    }
+    setActiveFilter(filters.find((filter) => filter.active));
   }, [filters]);
 
   return (
@@ -56,11 +54,11 @@ function Schedule() {
         <div className="row mt-5">
           {movies &&
             movies.length > 0 &&
-            movies
-              .filter(
-                (movie) => movie.category === activeFilter.name || activeFilter.name === "All"
-              )
-              .map((movie) => <Card key={movie._id} movie={movie} />)}
+            movies.map((movie) => {
+              if (movie.category === activeFilter.name || activeFilter.name === "All") {
+                return <Card key={movie._id} movie={movie} />;
+              }
+            })}
         </div>
       </div>
     </section>
