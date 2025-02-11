@@ -3,7 +3,7 @@
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 60vw;
+  width: 70vw;
   padding: 2rem 0 !important;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(20px);
@@ -12,6 +12,7 @@
 
 .movieSwiper .swiper-slide {
   position: relative;
+  top: -0.5rem !important;
   width: 150px !important;
   height: 200px !important;
 }

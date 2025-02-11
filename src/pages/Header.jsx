@@ -1,18 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 import NavListItem from "../components/NavListItem";
-import navListData from "../data/navListData";
+import { headerNavList } from "../data/navListData";
 import Search from "../components/Search";
 import ButtonMain from "../components/ButtonMain";
 
 function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const toggleBg = () => {
+    setIsScrolled(window.scrollY > 150);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleBg);
+    return () => window.removeEventListener("scroll", toggleBg);
+  }, []);
+
   return (
-    <header>
+    <header className={`${isScrolled ? "scrolled" : ""}`}>
       <a href="/" className="logo">
         Movieflex
       </a>
       <ul className="nav">
-        {navListData.map((item) => (
+        {headerNavList.map((item) => (
           <NavListItem key={item._id} navItem={item} />
         ))}
       </ul>

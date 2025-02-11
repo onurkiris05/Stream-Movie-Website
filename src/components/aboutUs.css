@@ -1,0 +1,29 @@
+.footer-nav__about-us h1 {
+  font-family: var(--ff-secondary);
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.footer-nav__about-us p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.footer-nav__social-icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.footer-nav__social-icons a {
+  text-decoration: none;
+  display: flex;
+  color: #fff;
+}
+
+.footer-nav__social-icons a:hover {
+  color: var(--clr-primary);
+}
