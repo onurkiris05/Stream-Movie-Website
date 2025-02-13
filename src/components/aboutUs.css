@@ -1,4 +1,8 @@
 .footer-nav__about-us h1 {
+  grid-area: about;
+}
+
+.footer-nav__about-us h1 {
   font-family: var(--ff-secondary);
   text-transform: uppercase;
   font-size: 2rem;

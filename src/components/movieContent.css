@@ -1,6 +1,6 @@
 .banner-container .content {
   position: relative;
-  width: clamp(400px, 40%, 600px);
+  width: min(100%, 600px);
   visibility: hidden;
   opacity: 0;
   transform: scale(0);

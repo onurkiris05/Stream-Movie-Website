@@ -17,3 +17,12 @@
   text-transform: uppercase;
   color: #ddd;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 576px) {
+  .filter-item {
+    flex: 1;
+    text-align: center;
+  }
+}

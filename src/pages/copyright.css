@@ -4,6 +4,7 @@
   font-size: 0.9rem;
   color: #aaa;
   padding: 2rem 0 1rem;
+  z-index: var(--z-content);
 }
 
 .copyright::after {

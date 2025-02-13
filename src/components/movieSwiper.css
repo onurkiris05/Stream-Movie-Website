@@ -23,3 +23,11 @@
   object-fit: cover;
   object-position: center;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 576px) {
+  .movieSwiper {
+    width: 90vw;
+  }
+}

@@ -12,25 +12,43 @@ header {
 }
 
 header.scrolled {
+  padding: 1rem 6rem;
+}
+
+header.scrolled::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: rgba(0, 0, 0, 0.6);
   border-bottom: 2px solid var(--clr-primary);
   border-image: linear-gradient(90deg, transparent, var(--clr-primary), transparent) 30;
   backdrop-filter: blur(20px);
-  padding: 1rem 6rem;
 }
 
-.logo {
-  font-family: var(--ff-secondary);
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  letter-spacing: 2px;
-  font-weight: 800;
-  text-decoration: none;
-  text-transform: uppercase;
-}
+/* MEDIA QUERIES */
 
-.nav {
-  display: flex;
-  gap: 1.5rem;
+@media (max-width: 576px) {
+  header {
+    padding: 2rem 2rem;
+  }
+
+  header.scrolled {
+    padding: 1rem 2rem;
+  }
+
+  header .search-bar {
+    display: none;
+  }
+
+  header .btn-main {
+    display: none;
+  }
+
+  header .btn-nav {
+    display: flex;
+  }
+
+  header .nav-main {
+    display: none;
+  }
 }

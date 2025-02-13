@@ -66,3 +66,10 @@ section p {
   letter-spacing: 1px;
   margin-bottom: 3rem;
 }
+
+/* MEDIA QUERIES */
+@media (max-width: 576px) {
+  section {
+    padding: 50px 20px 20px;
+  }
+}

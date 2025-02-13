@@ -36,7 +36,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  font-size: 8rem;
   visibility: hidden;
   opacity: 0;
   transition: var(--transition-slow);
@@ -45,4 +44,15 @@
 .banner-container .bgImg.active {
   visibility: visible;
   opacity: 1;
+}
+
+@media (max-width: 576px) {
+  .banner-container {
+    padding: 0 2rem;
+    min-height: 125vh;
+  }
+
+  .banner-container .movie {
+    padding: 0 2rem 2rem;
+  }
 }

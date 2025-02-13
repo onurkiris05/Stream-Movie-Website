@@ -1,7 +1,8 @@
 .footer-nav {
   position: relative;
   display: grid;
-  grid-template-columns: 2fr repeat(3, 1fr);
+  grid-template-areas: "about links contact";
+  grid-template-columns: 2fr 2fr 1fr;
   gap: 3rem;
   padding: 4rem 10rem;
   z-index: var(--z-content);
@@ -28,4 +29,32 @@
   object-position: center;
   filter: blur(2px);
   z-index: calc(var(--z-below) + var(--z-base));
+}
+
+.footer-nav__links-wrapper {
+  grid-area: links;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 576px) {
+  .footer-nav {
+    grid-template-areas: "about" "links" "contact";
+    grid-template-columns: auto;
+    gap: 3rem;
+    padding: 3rem 1rem;
+  }
+
+  .footer-nav__links-wrapper {
+    justify-content: space-between;
+  }
+
+  .footer-nav__bg {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
 }

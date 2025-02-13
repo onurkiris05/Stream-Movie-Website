@@ -1,8 +1,8 @@
 const headerNavList = [
-  { _id: 1, link: "#", name: "Home", active: true },
-  { _id: 2, link: "#schedule", name: "Schedule", active: false },
-  { _id: 3, link: "#coming-soon", name: "Coming Soon", active: false },
-  { _id: 4, link: "#blogs", name: "Blogs", active: false },
+  { _id: 1, link: "#", name: "", icon: "home-outline", active: true },
+  { _id: 2, link: "#schedule", name: "Schedule", icon: "", active: false },
+  { _id: 3, link: "#coming-soon", name: "Coming Soon", icon: "", active: false },
+  { _id: 4, link: "#blogs", name: "Blogs", icon: "", active: false },
 ];
 
 const footerUsefulList = [

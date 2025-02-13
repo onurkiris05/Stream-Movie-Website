@@ -23,8 +23,6 @@ function TrailerModal({ movie, isActive, toggleModal }) {
         <ion-icon name="close-outline"></ion-icon>
       </button>
       <iframe
-        width="70%"
-        height="70%"
         src={movie.video}
         title="YouTube video player"
         frameBorder="0"

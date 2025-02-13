@@ -1,0 +1,11 @@
+.logo {
+  font-family: var(--ff-secondary);
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  z-index: var(--z-header);
+}

@@ -1,0 +1,15 @@
+.btn-nav {
+  display: none;
+  font-size: 3rem;
+  color: #fff;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  z-index: var(--z-tooltip);
+}
+
+.btn-nav:hover {
+  color: var(--clr-primary);
+}

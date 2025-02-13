@@ -1,0 +1,5 @@
+.nav-main {
+  display: flex;
+  gap: 3rem;
+  z-index: var(--z-header);
+}
