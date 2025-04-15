@@ -1,24 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./comingSoon.css";
 import ComingSoonSwiper from "../components/ComingSoonSwiper";
 
-function ComingSoon() {
-  const [data, setData] = useState([]);
+/* eslint-disable react/prop-types */
+function ComingSoon({ data }) {
   const [comingMovies, setComingMovies] = useState([]);
 
-  const fetchData = () => {
-    fetch("http://localhost:5173/data/movieData.json")
-      .then((res) => res.json())
-      .then((data) => setData(data))
-      .catch((e) => console.error(e.message));
-  };
-
   useEffect(() => {
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    setComingMovies(data.filter((movie) => movie.type === "coming"));
+    data && setComingMovies(data.filter((movie) => movie.type === "coming"));
   }, [data]);
 
   return (

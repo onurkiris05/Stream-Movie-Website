@@ -1,25 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./schedule.css";
 import Card from "../components/Card";
 import filterList from "../data/filterList";
 import FilterItem from "../components/FilterItem";
 
-function Schedule() {
-  const [data, setData] = useState([]);
+/* eslint-disable react/prop-types */
+function Schedule({ data }) {
   const [movies, setMovies] = useState([]);
   const [filters, setFilters] = useState(filterList);
   const [activeFilter, setActiveFilter] = useState("All");
-
-  const fetchData = () => {
-    fetch("http://localhost:5173/data/movieData.json")
-      .then((res) => res.json())
-      .then((data) => setData(data))
-      .catch((e) => console.error(e.message));
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   useEffect(() => {
     setMovies(data);
@@ -47,7 +36,7 @@ function Schedule() {
         <div className="row">
           <ul className="filters">
             {filters.map((filter) => (
-              <FilterItem key={filter.id} filterItem={filter} handleChange={handleFilterChange} />
+              <FilterItem key={filter._id} filterItem={filter} handleChange={handleFilterChange} />
             ))}
           </ul>
         </div>

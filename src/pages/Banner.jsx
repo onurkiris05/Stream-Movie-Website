@@ -1,23 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./banner.css";
 import MovieContent from "../components/MovieContent";
 import DateContent from "../components/DateContent";
 import TrailerContent from "../components/TrailerContent";
 import MovieSwiper from "../components/MovieSwiper";
 
-function Banner() {
+/* eslint-disable react/prop-types */
+function Banner({ movieData }) {
   const [movies, setMovies] = useState([]);
 
-  const fetchData = () => {
-    fetch("http://localhost:5173/data/movieData.json")
-      .then((res) => res.json())
-      .then((data) => setMovies(data))
-      .catch((e) => console.error(e.message));
-  };
-
   useEffect(() => {
-    fetchData();
-  }, []);
+    setMovies(movieData);
+  }, [movieData]);
 
   const handleMovieChange = (movieId) => {
     setMovies((prevMovies) =>
