@@ -8,13 +8,14 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [data, setData] = useState([]);
+  const masterKey = "$2a$10$xCQaSMn7nIqmWLHzMBG.ZeG0o5QmLpbqK1iL18bHyuuRhAr3Tf6S2";
 
   const fetchData = () => {
     fetch("https://api.jsonbin.io/v3/b/67fe22d68561e97a50ffdc2e", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "X-Access-Key": import.meta.env.VITE_MASTER_KEY,
+        "X-Access-Key": masterKey,
       },
     })
       .then((res) => res.json())
